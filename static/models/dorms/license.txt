@@ -1,0 +1,11 @@
+Model Information:
+* title:	MG Building asset
+* source:	https://sketchfab.com/3d-models/mg-building-asset-2992eb17776d4f43884a481cc0c22633
+* author:	Artise1 (https://sketchfab.com/Artise1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "MG Building asset" (https://sketchfab.com/3d-models/mg-building-asset-2992eb17776d4f43884a481cc0c22633) by Artise1 (https://sketchfab.com/Artise1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

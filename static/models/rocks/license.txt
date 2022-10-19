@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rocks on Ground
+* source:	https://sketchfab.com/3d-models/rocks-on-ground-48b1cfe470e749a8810fae0bd9ebc19f
+* author:	xtremederpie (https://sketchfab.com/xtremederpie)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rocks on Ground" (https://sketchfab.com/3d-models/rocks-on-ground-48b1cfe470e749a8810fae0bd9ebc19f) by xtremederpie (https://sketchfab.com/xtremederpie) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

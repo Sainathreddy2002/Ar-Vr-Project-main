@@ -1,0 +1,11 @@
+Model Information:
+* title:	Debreceni Egyetem, Főépület
+* source:	https://sketchfab.com/3d-models/debreceni-egyetem-foepulet-517a026d961b435391ad6015626aba73
+* author:	Department of Physical Geography and GIS, Debrecen (https://sketchfab.com/geogis)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Debreceni Egyetem, Főépület" (https://sketchfab.com/3d-models/debreceni-egyetem-foepulet-517a026d961b435391ad6015626aba73) by Department of Physical Geography and GIS, Debrecen (https://sketchfab.com/geogis) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

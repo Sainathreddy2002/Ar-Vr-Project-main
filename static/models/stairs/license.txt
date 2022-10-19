@@ -1,0 +1,11 @@
+Model Information:
+* title:	SM Stair
+* source:	https://sketchfab.com/3d-models/sm-stair-6c83517d9cf04608abfaf019932588b1
+* author:	Ethan Donovan (https://sketchfab.com/edonovan)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SM Stair" (https://sketchfab.com/3d-models/sm-stair-6c83517d9cf04608abfaf019932588b1) by Ethan Donovan (https://sketchfab.com/edonovan) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
