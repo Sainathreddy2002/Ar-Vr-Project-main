@@ -9,7 +9,21 @@ import { VRButton } from 'three/examples/jsm/webxr/VRButton.js';
 
 var nipplejs=require('nipplejs')
 
+// /**
+//  * Base
+//  */
+// // Debug Gui declaration
+// const gui = new dat.GUI()
+// const debug={}
 
+// //audio
+
+// const playHitSound = (collision) =>
+// {
+//     hitSound.volume = Math.random()
+//     hitSound.currentTime = 0
+//     hitSound.play()
+// }
 
 
 // canvas
@@ -26,7 +40,6 @@ const arrboundingbox=[]
 /**
  * 3dModels
  */
-
 const dracoLoader = new DRACOLoader()
 dracoLoader.setDecoderPath('/draco/')
 
@@ -258,6 +271,9 @@ var human=new THREE.Object3D()
 var humanbox=null
 let mixer = null
 let action0=null
+let action1=null
+let action2=null
+
 gltfLoader.load(
     '/models/human.glb',
     (gltf) =>
@@ -503,8 +519,8 @@ gltfLoader.load(
 
 
 
-//Texture loader
-//For loading the grass on the ground
+//texture loader
+//for loading the grass on the ground
 const textureLoader=new THREE.TextureLoader()
 
 
@@ -556,7 +572,7 @@ scene.add(floor)
 //Bounding Box Planes
 
 
-//Same material for all the road boxes
+//same material for all the road boxes
 const material = new THREE.MeshBasicMaterial( {color: 0xffff00,visible:false} );
 
 
@@ -571,7 +587,7 @@ scene.add(Boundingplane2)
 Boundingplane1.position.set(-25,0,30)
 Boundingplane2.position.set(-25,0,-30)
 
-//Adding the University road boxes to bounding box
+//adding the University road boxes to bounding box
 const Boundingplane1box=new THREE.Box3()
 Boundingplane1box.setFromObject(Boundingplane1)
 const Boundingplane2box=new THREE.Box3()
@@ -632,11 +648,12 @@ scene.add(ambientLight1)
  const renderer = new THREE.WebGLRenderer()//{canvas:canvas})
  document.body.appendChild(renderer.domElement);
  document.body.appendChild( VRButton.createButton( renderer ) );
- renderer.xr.enabled = true;
 renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+renderer.xr.enabled = true;
+
 
 window.addEventListener('resize', () =>
 {
@@ -679,7 +696,7 @@ let joyManager;
 let angle
 addJoystick();
 function updatePlayer(){
-    // Move the player
+    // move the player
      angle = controls1.getAzimuthalAngle()
     if(glthuman!=null){
       if (fwdValue > 0) {
@@ -711,7 +728,7 @@ function updatePlayer(){
         }
        glthuman.scene.updateMatrixWorld()
   
-  // Reposition camera
+  // reposition camera
   camera0.position.sub(controls1.target)
   controls1.target.copy(glthuman.scene.position)
   camera0.position.add(glthuman.scene.position)
@@ -818,6 +835,27 @@ earthmaterial.roughness=0
 earthmaterial.envMap=envmaptextureearth
 
 
+//VR
+//xr camera
+var dolly=new THREE.Group()
+dolly.add(camera0)
+
+
+//right controller
+const rightController=renderer.xr.getController(0)
+rightController.addEventListener("selectstart",()=>{
+    console.log(" right working")
+    dolly.position.x+=13
+})
+
+
+//left controller
+const leftController=renderer.xr.getController(1)
+leftController.addEventListener("selectstart",()=>{
+    console.log("left working")
+    dolly.position.x-=13
+})
+
 
 /**
  * Animate
@@ -825,12 +863,7 @@ earthmaterial.envMap=envmaptextureearth
 const clock = new THREE.Clock()
 let previousTime = 0
 
-renderer.setAnimationLoop( function () {
-
-	renderer.render( scene, camera0 );
-
-} );
-const animate = () =>
+const tick = () =>
 {
     updatePlayer();
     const elapsedTime = clock.getElapsedTime()
@@ -870,8 +903,13 @@ controls1.update()
 //Rendering
 renderer.render(scene,camera0)
 
-// Call animate again on the next frame
-window.requestAnimationFrame(animate)
+// Call tick again on the next frame
+window.requestAnimationFrame(tick)
 }
+renderer.setAnimationLoop( function () {
 
-animate()
+	renderer.render( scene, camera0 );
+
+} );
+
+tick()
