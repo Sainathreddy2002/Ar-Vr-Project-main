@@ -13,3 +13,9 @@ npm run build
 
 ## 3D Models 
 Credits:https://sketchfab.com/
+
+## Web XR Emulator Api
+Install this extension from Chrome Web Store and access this extension in the console to test the VR.
+
+## Github Link
+https://github.com/Sainathreddy2002/Ar-Vr-Project-main
